@@ -8,3 +8,4 @@
 	icon = 'modular_zubbers/icons/turf/floors.dmi'
 	icon_state = "sandyplating"
 	initial_gas_mix = AIRLESS_ATMOS
+
