@@ -25668,6 +25668,13 @@
 	},
 /turf/open/floor/iron,
 /area/station/security/processing)
+"ijh" = (
+/turf/closed/mineral/random/stationside/asteroid/porus{
+	icon = "modular_skyrat/modules/liquids/icons/turf/smoothrocks.dmi";
+	icon_state = "smoothrocks-0";
+	color = "#8c3b35"
+	},
+/area/space)
 "ijj" = (
 /obj/effect/turf_decal/trimline/neutral/filled/line,
 /obj/structure/sign/departments/holy{
@@ -56808,6 +56815,9 @@
 /obj/machinery/light/small/dim/directional/west,
 /turf/open/floor/iron/freezer,
 /area/station/security/prison)
+"tgK" = (
+/turf/closed/mineral/random/labormineral,
+/area/space)
 "tgN" = (
 /obj/machinery/door/firedoor,
 /obj/effect/turf_decal/trimline/red/filled/line{
@@ -58092,6 +58102,12 @@
 	},
 /turf/open/floor/glass/reinforced,
 /area/station/ai_monitored/turret_protected/aisat/hallway)
+"tDv" = (
+/turf/closed/mineral/random/stationside/asteroid/porus{
+	icon = "modular_skyrat/modules/liquids/icons/turf/smoothrocks.dmi";
+	icon_state = "smoothrocks-0"
+	},
+/area/space)
 "tDz" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer4,
 /turf/open/floor/iron/dark,
@@ -84558,7 +84574,7 @@ aaa
 aaa
 vXM
 vXM
-vXM
+tgK
 vXM
 vXM
 vXM
@@ -84817,7 +84833,7 @@ vXM
 vXM
 vXM
 vXM
-vXM
+tDv
 vXM
 vXM
 vXM
@@ -85075,7 +85091,7 @@ aaa
 vXM
 vXM
 vXM
-vXM
+ijh
 vXM
 vXM
 vXM
