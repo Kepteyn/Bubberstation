@@ -53,7 +53,10 @@ menu "menu"
 		command = "Hotkeys-Help"
 		category = "&Help"
 		saved-params = "is-checked"
-
+	elem  "Use Internet Routing Relay"
+		name = "Internet Routing Relays"
+		command = "go2relay"
+		saved-params = "is-checked"
 
 window "mainwindow"
 	elem "mainwindow"
@@ -90,6 +93,15 @@ window "mainwindow"
 		type = BROWSER
 		pos = 0,0
 		size = 999x999
+		anchor1 = -1,-1
+		anchor2 = -1,-1
+		is-visible = false
+		saved-params = ""
+	elem "commandbar_spy"
+		type = BROWSER
+		is-default = false
+		pos = 0,0
+		size = 200x200
 		anchor1 = -1,-1
 		anchor2 = -1,-1
 		is-visible = false
