@@ -48,3 +48,14 @@
 	name = "Rock and Stone"
 	icon = 'modular_zubbers/icons/areas/area.dmi'
 	icon_state = "rock_and_stone"
+
+/area/station/maintenance/rock_and_stone
+	name = "Rock and Stone"
+	icon = 'modular_zubbers/icons/areas/area.dmi'
+	icon_state = "rock_and_stone"
+
+/area/station/maintenance/abandoned_shuttlebay
+	name = "Abandoned Shuttlebay"
+	icon = 'modular_zubbers/icons/areas/area.dmi'
+	icon_state = "abandoned_hangar"
+

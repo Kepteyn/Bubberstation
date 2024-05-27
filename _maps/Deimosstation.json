@@ -1,0 +1,12 @@
+{
+	"version": 1,
+	"map_name": "Deimos Station",
+	"map_path": "map_files/DeimosStation",
+	"map_file": "DeimosStation.dmm",
+	"shuttles": {
+		"emergency": "emergency_delta",
+		"ferry": "ferry_fancy",
+		"cargo": "cargo_delta_skyrat",
+		"whiteship": "whiteship_delta"
+	}
+}
