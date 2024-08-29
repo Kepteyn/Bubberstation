@@ -78,10 +78,11 @@
 @include meta.load-css('./interfaces/Trophycase.scss');
 @include meta.load-css('./interfaces/Uplink.scss');
 @include meta.load-css('./interfaces/UtilityModulesPane.scss');
-// SKYRAT ADDITION START
+// SKYRAT EDIT ADDITION START
 @include meta.load-css('./interfaces/ClockworkResearch.scss');
 @include meta.load-css('./interfaces/ClockworkSlab.scss');
-// SKYRAT ADDITION END
+@include meta.load-css('./interfaces/VorePanel.scss');
+// SKYRAT EDIT ADDITION END
 
 // Layouts
 @include meta.load-css('./layouts/Layout.scss');

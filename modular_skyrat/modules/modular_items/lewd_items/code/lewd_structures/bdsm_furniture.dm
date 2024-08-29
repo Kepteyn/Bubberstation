@@ -15,7 +15,7 @@
 	icon_state = "bdsm_bed_kit"
 	w_class = WEIGHT_CLASS_HUGE
 
-/obj/item/bdsm_bed_kit/CtrlShiftClick(mob/user)
+/obj/item/bdsm_bed_kit/click_ctrl_shift(mob/user)
 	. = ..()
 	if(. == FALSE)
 		return FALSE
@@ -54,7 +54,7 @@
 	//Set them back down to the normal lying position
 	affected_mob.pixel_y = affected_mob.base_pixel_y + affected_mob.body_position_pixel_y_offset
 
-/obj/structure/bed/bdsm_bed/CtrlShiftClick(mob/user)
+/obj/structure/bed/bdsm_bed/click_ctrl_shift(mob/user)
 	. = ..()
 	if(. == FALSE)
 		return FALSE
@@ -242,7 +242,7 @@
 	add_fingerprint(user)
 	update_icon_state()
 	update_icon()
-	play_lewd_sound(loc, 'sound/weapons/magin.ogg', 20, TRUE)
+	conditional_pref_sound(loc, 'sound/weapons/magin.ogg', 20, TRUE)
 
 //Place the mob in the desired position after buckling
 /obj/structure/chair/x_stand/post_buckle_mob(mob/living/affected_mob)
@@ -288,7 +288,7 @@
 *	X-STAND CONSTRUCTION KIT
 */
 
-/obj/structure/chair/x_stand/CtrlShiftClick(mob/user)
+/obj/structure/chair/x_stand/click_ctrl_shift(mob/user)
 	. = ..()
 	if(. == FALSE)
 		return FALSE
