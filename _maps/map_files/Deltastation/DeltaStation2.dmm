@@ -41965,6 +41965,7 @@
 	dir = 5;
 	id = "cargoload"
 	},
+/obj/machinery/export_gate,
 /turf/open/floor/plating,
 /area/station/cargo/storage)
 "ktP" = (
