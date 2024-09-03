@@ -32,7 +32,6 @@
 		OFFSET_EARS = YINGLET_EARS_ICON
 	)
 	bodytemp_normal = BODYTEMP_NORMAL
-	mutantears = /obj/item/organ/internal/ears/yinglet
 	body_size_restricted = TRUE
 	bodypart_overrides = list(
 		BODY_ZONE_HEAD = /obj/item/bodypart/head/mutant/yinglet,
@@ -44,10 +43,10 @@
 	)
 	meat = /obj/item/food/meat/slab/chicken/human
 
-/datum/species/yinglet/get_default_yinglet_bodyparts()
+/datum/species/yinglet/get_default_mutant_bodyparts()
 	return list(
 		"tail" = list("Yinglet (Default)", TRUE),
-		"ears" = list("Yinglet Regular", TRUE),
+		"ears" = list("Yinglet Long Ears", TRUE),
 		"legs" = list("Normal Legs", FALSE),
 	)
 
@@ -56,15 +55,18 @@
 	liked_foodtypes = MEAT | GORE | RAW
 	disliked_foodtypes = GROSS | GRAIN
 
-/datum/species/yinglet/prepare_human_for_preview(mob/living/carbon/human/ying)
-	var/base_color = "#c0965f"
-	var/ear_color = "#e4c49b"
+/datum/species/yinglet/prepare_human_for_preview(mob/living/carbon/human/yinglet)
+	var/main_color = "#222222"
+	var/secondary_color = "#b8b8b8"
+	var/tertiary_color = "#b8b8b8"
+	yinglet.dna.features["mcolor"] = base_color
+	yinglet.dna.mutant_bodyparts["ears"] = list(MUTANT_INDEX_NAME = "Yinglet Long Ears", MUTANT_INDEX_COLOR_LIST = list(main_color, secondary_color, tertiary_color))
+	yinglet.dna.mutant_bodyparts["tail"] = list(MUTANT_INDEX_NAME = "Yinglet (Default)", MUTANT_INDEX_COLOR_LIST = list(main_color, secondary_color, tertiary_color))
+	yinglet.eye_color_left = "#c4c400"
+	yinglet.eye_color_right = "#c4c400"
+	regenerate_organs(yinglet, src, visual_only = TRUE)
+	yinglet.update_body(TRUE)
 
-	ying.dna.features["mcolor"] = base_color
-	ying.dna.mutant_bodyparts["ears"] = list(MUTANT_INDEX_NAME = "Yinglet Feathers Upright", MUTANT_INDEX_COLOR_LIST = list(ear_color, ear_color, ear_color))
-	ying.dna.mutant_bodyparts["tail"] = list(MUTANT_INDEX_NAME = "Yinglet (Default)", MUTANT_INDEX_COLOR_LIST = list(base_color, base_color, ear_color))
-	regenerate_organs(ying, src, visual_only = TRUE)
-	ying.update_body(TRUE)
 
 /datum/species/yinglet/on_species_gain(mob/living/carbon/human/new_yinglet, datum/species/old_species, pref_load)
 	. = ..()

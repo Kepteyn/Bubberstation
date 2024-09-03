@@ -1,10 +1,11 @@
-#define TESHARI_PUNCH_LOW 2 // Lower bound punch damage
-#define TESHARI_PUNCH_HIGH 6
-#define TESHARI_BRUTE_MODIFIER 1.3
+#define YINGLET_PUNCH_LOW 2 // Lower bound punch damage
+#define YINGLET_PUNCH_HIGH 6
+#define YINGLET_BRUTE_MODIFIER 1.3
+#define YINGLET_BURN_MODIFIER 1
 
-// teshari!
-/obj/item/bodypart/head/mutant/teshari
-	icon_greyscale = BODYPART_ICON_TESHARI
+// yinglet!
+/obj/item/bodypart/head/mutant/yinglet
+	icon_greyscale = BODYPART_ICON_YINGLET
 	bodyshape = parent_type::bodyshape | BODYSHAPE_CUSTOM
 	limb_id = SPECIES_YINGLET
 	brute_modifier = YINGLET_BRUTE_MODIFIER
@@ -33,11 +34,11 @@
 /obj/item/bodypart/chest/mutant/yinglet
 	icon_greyscale = BODYPART_ICON_YINGLET
 	bodyshape = parent_type::bodyshape | BODYSHAPE_CUSTOM
-	limb_id = SPECIES_TESHARI
-	brute_modifier = TESHARI_BRUTE_MODIFIER
-	burn_modifier = TESHARI_BURN_MODIFIER
+	limb_id = SPECIES_YINGLET
+	brute_modifier = YINGLET_BRUTE_MODIFIER
+	burn_modifier = YINGLET_BURN_MODIFIER
 
-/obj/item/bodypart/chest/mutant/teshari/Initialize(mapload)
+/obj/item/bodypart/chest/mutant/yinglet/Initialize(mapload)
 	worn_back_offset = new(
 		attached_part = src,
 		feature_key = OFFSET_BACK,
@@ -50,7 +51,7 @@
 	)
 	return ..()
 
-/obj/item/bodypart/arm/left/mutant/teshari/Initialize(mapload)
+/obj/item/bodypart/arm/left/mutant/yinglet/Initialize(mapload)
 	held_hand_offset =  new(
 		attached_part = src,
 		feature_key = OFFSET_HELD,
@@ -59,7 +60,7 @@
 	)
 	return ..()
 
-/obj/item/bodypart/arm/right/mutant/teshari/Initialize(mapload)
+/obj/item/bodypart/arm/right/mutant/yinglet/Initialize(mapload)
 	held_hand_offset =  new(
 		attached_part = src,
 		feature_key = OFFSET_HELD,
@@ -68,59 +69,57 @@
 	)
 	return ..()
 
-/obj/item/bodypart/arm/left/mutant/teshari
-	icon_greyscale = BODYPART_ICON_TESHARI
+/obj/item/bodypart/arm/left/mutant/yinglet
+	icon_greyscale = BODYPART_ICON_YINGLET
 	bodyshape = parent_type::bodyshape | BODYSHAPE_CUSTOM
-	limb_id = SPECIES_TESHARI
-	unarmed_damage_low = TESHARI_PUNCH_LOW
-	unarmed_damage_high = TESHARI_PUNCH_HIGH
-	brute_modifier = TESHARI_BRUTE_MODIFIER
-	burn_modifier = TESHARI_BURN_MODIFIER
+	limb_id = SPECIES_YINGLET
+	unarmed_damage_low = YINGLET_PUNCH_LOW
+	unarmed_damage_high = YINGLET_PUNCH_HIGH
+	brute_modifier = YINGLET_BRUTE_MODIFIER
+	burn_modifier = YINGLET_BURN_MODIFIER
 
 
-/obj/item/bodypart/arm/right/mutant/teshari
-	icon_greyscale = BODYPART_ICON_TESHARI
+/obj/item/bodypart/arm/right/mutant/yinglet
+	icon_greyscale = BODYPART_ICON_YINGLET
 	bodyshape = parent_type::bodyshape | BODYSHAPE_CUSTOM
-	limb_id = SPECIES_TESHARI
-	unarmed_damage_low = TESHARI_PUNCH_LOW
-	unarmed_damage_high = TESHARI_PUNCH_HIGH
-	brute_modifier = TESHARI_BRUTE_MODIFIER
-	burn_modifier = TESHARI_BURN_MODIFIER
+	limb_id = SPECIES_YINGLET
+	unarmed_damage_low = YINGLET_PUNCH_LOW
+	unarmed_damage_high = YINGLET_PUNCH_HIGH
+	brute_modifier = YINGLET_BRUTE_MODIFIER
+	burn_modifier = YINGLET_BURN_MODIFIER
 
 
-/obj/item/bodypart/leg/left/mutant/teshari
-	icon_greyscale = BODYPART_ICON_TESHARI
+/obj/item/bodypart/leg/left/mutant/yinglet
+	icon_greyscale = BODYPART_ICON_YINGLET
 	bodyshape = parent_type::bodyshape | BODYSHAPE_CUSTOM
-	limb_id = SPECIES_TESHARI
-	digitigrade_type = /obj/item/bodypart/leg/left/digitigrade/teshari
-	brute_modifier = TESHARI_BRUTE_MODIFIER
-	burn_modifier = TESHARI_BURN_MODIFIER
+	limb_id = SPECIES_YINGLET
+	digitigrade_type = /obj/item/bodypart/leg/left/digitigrade/yinglet
+	brute_modifier = YINGLET_BRUTE_MODIFIER
+	burn_modifier = YINGLET_BURN_MODIFIER
 
-/obj/item/bodypart/leg/right/mutant/teshari
-	icon_greyscale = BODYPART_ICON_TESHARI
+/obj/item/bodypart/leg/right/mutant/yinglet
+	icon_greyscale = BODYPART_ICON_YINGLET
 	bodyshape = parent_type::bodyshape | BODYSHAPE_CUSTOM
-	limb_id = SPECIES_TESHARI
-	digitigrade_type = /obj/item/bodypart/leg/right/digitigrade/teshari
-	brute_modifier = TESHARI_BRUTE_MODIFIER
-	burn_modifier = TESHARI_BURN_MODIFIER
+	limb_id = SPECIES_YINGLET
+	digitigrade_type = /obj/item/bodypart/leg/right/digitigrade/yinglet
+	brute_modifier = YINGLET_BRUTE_MODIFIER
+	burn_modifier = YINGLET_BURN_MODIFIER
 
-/obj/item/bodypart/leg/left/digitigrade/teshari
-	icon_greyscale = BODYPART_ICON_TESHARI
+/obj/item/bodypart/leg/left/digitigrade/yinglet
+	icon_greyscale = BODYPART_ICON_YINGLET
 	bodyshape = parent_type::bodyshape | BODYSHAPE_CUSTOM
-	base_limb_id = SPECIES_TESHARI
-	brute_modifier = TESHARI_BRUTE_MODIFIER
-	burn_modifier = TESHARI_BURN_MODIFIER
-	speed_modifier = -0.1
+	base_limb_id = SPECIES_YINGLET
+	brute_modifier = YINGLET_BRUTE_MODIFIER
+	burn_modifier = YINGLET_BURN_MODIFIER
 
-/obj/item/bodypart/leg/right/digitigrade/teshari
-	icon_greyscale = BODYPART_ICON_TESHARI
+/obj/item/bodypart/leg/right/digitigrade/yinglet
+	icon_greyscale = BODYPART_ICON_YINGLET
 	bodyshape = parent_type::bodyshape | BODYSHAPE_CUSTOM
-	base_limb_id = SPECIES_TESHARI
-	brute_modifier = TESHARI_BRUTE_MODIFIER
-	burn_modifier = TESHARI_BURN_MODIFIER
-	speed_modifier = -0.1
+	base_limb_id = SPECIES_YINGLET
+	brute_modifier = YINGLET_BRUTE_MODIFIER
+	burn_modifier = YINGLET_BURN_MODIFIER
 
-#undef TESHARI_PUNCH_LOW
-#undef TESHARI_PUNCH_HIGH
-#undef TESHARI_BURN_MODIFIER
-#undef TESHARI_BRUTE_MODIFIER
+#undef YINGLET_PUNCH_LOW
+#undef YINGLET_PUNCH_HIGH
+#undef YINGLET_BURN_MODIFIER
+#undef YINGLET_BRUTE_MODIFIER
