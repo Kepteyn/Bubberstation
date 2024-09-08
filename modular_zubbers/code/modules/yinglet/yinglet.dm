@@ -5,7 +5,7 @@
 	name = "Yinglet"
 	id = SPECIES_YINGLET
 	no_gender_shaping = TRUE // Female uniform shaping breaks yinglet worn sprites, so this is disabled. This will not affect anything else in regards to gender however.
-	eyes_icon = 'modular_skyrat/modules/organs/icons/yinglet_eyes.dmi'
+	eyes_icon = 'modular_zubbers/icons/mob/species/yinglet/eyes.dmi'
 	inherent_traits = list(
 		TRAIT_ADVANCEDTOOLUSER,
 		TRAIT_CAN_STRIP,
@@ -17,7 +17,7 @@
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_MAGIC | MIRROR_PRIDE | ERT_SPAWN | RACE_SWAP | SLIME_EXTRACT
 	payday_modifier = 1.0
 	mutanttongue = /obj/item/organ/internal/tongue/yinglet
-	custom_worn_icons = list(
+	/* custom_worn_icons = list(
 		OFFSET_HEAD = YINGLET_HEAD_ICON,
 		OFFSET_FACEMASK = YINGLET_MASK_ICON,
 		OFFSET_NECK = YINGLET_NECK_ICON,
@@ -30,7 +30,7 @@
 		OFFSET_BACK = YINGLET_BACK_ICON,
 		OFFSET_ACCESSORY = YINGLET_ACCESSORIES_ICON,
 		OFFSET_EARS = YINGLET_EARS_ICON
-	)
+	) */
 	bodytemp_normal = BODYTEMP_NORMAL
 	body_size_restricted = TRUE
 	bodypart_overrides = list(
@@ -59,7 +59,7 @@
 	var/main_color = "#222222"
 	var/secondary_color = "#b8b8b8"
 	var/tertiary_color = "#b8b8b8"
-	yinglet.dna.features["mcolor"] = base_color
+	yinglet.dna.features["mcolor"] = main_color
 	yinglet.dna.mutant_bodyparts["ears"] = list(MUTANT_INDEX_NAME = "Yinglet Long Ears", MUTANT_INDEX_COLOR_LIST = list(main_color, secondary_color, tertiary_color))
 	yinglet.dna.mutant_bodyparts["tail"] = list(MUTANT_INDEX_NAME = "Yinglet (Default)", MUTANT_INDEX_COLOR_LIST = list(main_color, secondary_color, tertiary_color))
 	yinglet.eye_color_left = "#c4c400"
