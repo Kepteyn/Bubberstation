@@ -48,7 +48,7 @@ GLOBAL_LIST_INIT(shower_mode_descriptions, list(
 	///How much reagent capacity should the shower begin with when built.
 	var/reagent_capacity = 200
 	///How many units the shower refills every second.
-	var/refill_rate = 0.5
+	var/refill_rate = 5	//BUBBER EDIT
 	///Does the shower have a water recycler to recollect its water supply?
 	var/has_water_reclaimer = TRUE
 	///Which mode the shower is operating in.
@@ -325,14 +325,17 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/shower, (-16))
 		// Cycle: update_actually_on() will only change state if appropriate.
 		update_actually_on(intended_on)
 
+	//BUBBER EDIT
 	// Reclaim water
-	if(!actually_on)
-		if(has_water_reclaimer && reagents.total_volume < reagents.maximum_volume)
-			reagents.add_reagent(reagent_id, refill_rate * seconds_per_tick)
-			return 0
+	// if(!actually_on)
+	if(has_water_reclaimer && reagents.total_volume < reagents.maximum_volume)
+		reagents.add_reagent(reagent_id, refill_rate * seconds_per_tick)
+		return 0
 
 		// FOREVER mode stays processing so it can cycle back on.
+	if(!actually_on)
 		return mode == SHOWER_MODE_FOREVER ? 0 : PROCESS_KILL
+	//EDIT END
 
 	// Wash up.
 	wash_atom(loc)
