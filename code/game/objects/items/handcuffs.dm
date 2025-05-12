@@ -158,6 +158,7 @@
 		cuffs = new type()
 
 	target.equip_to_slot(cuffs, ITEM_SLOT_HANDCUFFED)
+	SEND_SIGNAL(target, COMSIG_MOB_HANDCUFFED) //BUBBER EDIT ADDITION
 
 	if(trashtype && !dispense)
 		qdel(src)
@@ -261,6 +262,7 @@
 	cable_color = null
 	custom_materials = null
 	color = null
+	resistance_flags = FIRE_PROOF | LAVA_PROOF
 
 /**
  * Red cable restraints
